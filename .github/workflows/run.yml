@@ -1,4 +1,4 @@
-name: Run Script
+name: Run bash script
 
 on:
   push:
@@ -7,10 +7,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest:20.04
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/shell@v2
-        with:
-          args: bash make.sh
-          
+      - uses: actions/checkout@v2
+
+      - name: Run Script
+        run: bash make.sh
+        
