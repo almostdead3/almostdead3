@@ -1,6 +1,15 @@
-steps:
-  - name: Run bash script
-    run: |
-      chmod +x make.sh
-      ./make.sh
-      
+name: Run Bash Script
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-bash-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Run bash script
+        run: bash make.sh
