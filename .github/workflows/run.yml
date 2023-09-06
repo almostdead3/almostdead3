@@ -1,0 +1,6 @@
+steps:
+  - name: Run bash script
+    run: |
+      chmod +x make.sh
+      ./make.sh￼
+      
