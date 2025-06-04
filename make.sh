@@ -142,11 +142,11 @@ zip -r system.zip system.new.dat.br system.patch.dat system.transfer.list
 file_path="./system.zip"
 
 # Get the SourceForge username and password
-sourceforge_username="joy569569"
-sourceforge_password="Arijit@12345"
+sourceforge_username="your_username"
+sourceforge_password="your_password"
 
 # Connect to SourceForge using SFTP
 ssh joy569569@frs.sourceforge.net
 
 # Upload the system_new.img file
-scp -r $file_path joy569569@frs.sourceforge.net:/home/frs/project/testing-project/testing
+scp -r $file_path your_username@frs.sourceforge.net:/home/frs/project/testing-project/testing
